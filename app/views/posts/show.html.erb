@@ -1,14 +1,15 @@
-  <div class="row g-5">
+ <div class="row g-5">
     <div class="col-md-8">
-
       <%= render @post %>
-
+      <div>
+        <h1><%= @post.title %></h1>
+        <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
+      </div>
       <div>
         <%= link_to "Edit this post", edit_post_path(@post) %> |
         <%= link_to "Back to posts", posts_path %>
         <%= button_to "Destroy this post", @post, method: :delete %>
       </div>
-
     </div>
 
     <div class="col-md-4">
@@ -17,7 +18,6 @@
           <h4 class="fst-italic">About</h4>
           <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
         </div>
-
         <div>
           <h4 class="fst-italic">Recent posts</h4>
           <ul class="list-unstyled">
@@ -50,7 +50,6 @@
             </li>
           </ul>
         </div>
-
         <div class="p-4">
           <h4 class="fst-italic">Archives</h4>
           <ol class="list-unstyled mb-0">
@@ -68,7 +67,6 @@
             <li><a href="#">April 2020</a></li>
           </ol>
         </div>
-
         <div class="p-4">
           <h4 class="fst-italic">Elsewhere</h4>
           <ol class="list-unstyled">
