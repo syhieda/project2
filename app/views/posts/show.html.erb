@@ -2,16 +2,14 @@
     <div class="col-md-8">
       <%= render @post %>
       <div>
-        <h1><%= @post.title %></h1>
-        <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
+      
       </div>
       <div>
         <%= link_to "Edit this post", edit_post_path(@post) %> |
         <%= link_to "Back to posts", posts_path %>
-        <%= button_to "Destroy this post", @post, method: :delete %>
+        <%= button_to "Destroy this post", @post, method: :delete, class: "btn btn-sm btn-outline-secondary"%>
       </div>
-    </div>
-
+   </div>
     <div class="col-md-4">
       <div class="position-sticky" style="top: 2rem;">
         <div class="p-4 mb-3 bg-body-tertiary rounded">

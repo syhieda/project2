@@ -1,0 +1,17 @@
+<div id="<%= dom_id post %>">
+  <h2>
+    <%= post.title %>
+  </h2>
+
+  <h4>
+    <%= post.content %>
+  </h4>
+
+  <p>
+    <%= image_tag(post.image.url, alt: 'Image', class: 'img-fluid') if post.image? %>
+  </p>
+
+    <p>
+      <%= post.user_id if post.user %>
+    </p>
+</div>

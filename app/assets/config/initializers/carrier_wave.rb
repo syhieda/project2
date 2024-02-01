@@ -1,3 +1,3 @@
 CarrierWave.configure do |config|
-    config.storage = :file
-  end
+  config.storage = :file
+end
