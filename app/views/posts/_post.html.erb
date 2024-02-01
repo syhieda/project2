@@ -12,6 +12,10 @@
   </p>
 
     <p>
-      <%= post.user_id if post.user %>
+      <%= post.user.email if post.user.email %>
+    </p>
+
+    <p>
+      <%= post.created_at %>
     </p>
 </div>
