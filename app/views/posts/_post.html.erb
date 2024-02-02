@@ -3,9 +3,9 @@
     <%= post.title %>
   </h2>
 
-  <h4>
+  <p>
     <%= post.content %>
-  </h4>
+  </p>
 
   <p>
     <%= image_tag(post.image.url, alt: 'Image', class: 'img-fluid') if post.image? %>
